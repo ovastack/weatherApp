@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('../src/utils/geocode')
 const forecast = require('../src/utils/forecast')
+const port = process.env.PORT || 5000
 
 const route = express();
 const viewspath = path.join(__dirname, '../templates/views')
@@ -61,5 +62,5 @@ route.get('/weather', (req, res)=>{
 
 })
 
-route.listen(5000)
+route.listen(port)
 
